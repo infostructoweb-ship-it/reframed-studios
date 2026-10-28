@@ -8,8 +8,11 @@
   // Header: verbergen bij naar beneden scrollen, tonen bij omhoog scrollen
   var header = document.querySelector("[data-header]");
   var lastY = window.scrollY;
+  function setSolid() { if (header) header.classList.toggle("is-solid", window.scrollY > 10); }
+  setSolid();
   window.addEventListener("scroll", function () {
     var y = window.scrollY;
+    setSolid();
     if (!header || document.body.classList.contains("menu-open")) return;
     if (y > lastY && y > 150) header.classList.add("is-hidden");
     else header.classList.remove("is-hidden");
