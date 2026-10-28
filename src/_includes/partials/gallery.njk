@@ -1,0 +1,6 @@
+{#- verwacht: galleryImages, galleryRatio ('wide' | 'square'), galleryMobile ('hide' | 'grid') -#}
+<div class="gallery gallery--{{ galleryRatio or 'wide' }} gallery--mobile-{{ galleryMobile or 'hide' }}">
+  {%- for item in galleryImages %}
+  <figure class="gallery__item">{% img item.image, item.alt, "(min-width: 992px) 25vw, 50vw" %}</figure>
+  {%- endfor %}
+</div>

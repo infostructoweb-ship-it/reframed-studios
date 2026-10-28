@@ -1,0 +1,12 @@
+# Oude Shopify-URL's → nieuwe pagina's
+/pages/portfolio            /portfolio/   301
+/pages/about-us             /about-us/    301
+/pages/about-us-who-are-we  /about-us/    301
+/pages/contact              /contact/     301
+/pages/thank-you-page       /contact/     301
+/pages/*                    /             301
+/collections/*              /             301
+/products/*                 /             301
+/policies/*                 /             301
+/cart                       /             301
+/search                     /             301

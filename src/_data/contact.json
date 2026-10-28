@@ -1,0 +1,24 @@
+{
+  "seo_title": "Contact | Book Organic Content for Your Hotel or Airbnb - Reframed Studios",
+  "seo_description": "Looking for professional organic content for your Airbnb, villa or hotel? Contact Reframed Studios for photography, short films and UGC.",
+  "hero": {
+    "title": "Contact Us",
+    "video": "/videos/hero-palm.mp4",
+    "poster": "/images/uploads/poster-palm.jpg",
+    "poster_alt": "Palm trees swaying against an evening sky"
+  },
+  "form": {
+    "heading": "Let’s Work Together",
+    "text": "Looking for professional organic content to elevate your Airbnb or Hotel? Let’s create visuals that connect, inspire, and convert.",
+    "services_label": "What kind of services are you looking for?",
+    "services": [
+      "Organic Photography",
+      "Shortfilm",
+      "UGC Content",
+      "Custom"
+    ],
+    "button_text": "Submit",
+    "inactive_message": "This is a portfolio website. The contact form is not active."
+  },
+  "direct_heading": "Or contact us directly at:"
+}

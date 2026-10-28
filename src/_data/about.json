@@ -1,0 +1,133 @@
+{
+  "seo_title": "About Us | Lara & Djenthan - Reframed Studios",
+  "seo_description": "Meet Reframed Studios: Lara and Djenthan combine marketing, consumer psychology and a love for travel to create authentic visuals for hospitality brands.",
+  "banner": {
+    "image": "/images/uploads/banner-about.jpg",
+    "alt": "Waves rolling onto the shore"
+  },
+  "intro": {
+    "heading": "We Are Reframed",
+    "text": "We are driven by passion, creativity, and a shared love for capturing the world through our lens. Traveling has not only shaped our experiences but has inspired us to create Reframed, reflecting our passion for creating, photography and branding.\n\nReframed is the result of our journey, where passion meets purpose, and where we turn our vision into something that resonates beyond just an image."
+  },
+  "values": [
+    {
+      "icon": "/images/uploads/icon-passionate.png",
+      "label": "Passionate"
+    },
+    {
+      "icon": "/images/uploads/icon-reframed.png",
+      "label": "Expertise"
+    },
+    {
+      "icon": "/images/uploads/icon-precise.png",
+      "label": "Precise"
+    },
+    {
+      "icon": "/images/uploads/icon-proactive.png",
+      "label": "Proactive"
+    }
+  ],
+  "team": [
+    {
+      "name": "Lara",
+      "role": "Creative marketing specialist & photography enthausiast",
+      "photo": "/images/uploads/lara.jpg",
+      "alt": "Portrait of Lara",
+      "text": "After completing my degree in Creative Marketing & Sales, I specialized in Neuromarketing and the psychology of consumer behavior. Through years of experience working as a marketing professional in the online fashion industry, I have broadened my expertise in developing and executing creative strategies that actually make an impact.\n\nSince I was young, I have been captivated by the power of photography, images that could evoke deep emotions and carry a sense of meaning. The ability to capture a moment and translate its atmosphere and feeling into a visual has always fascinated me. My true passion lies in capturing life in a way that needs no words yet speaks volumes.\n\nPursuing this passion led me to Reframed, where I found the perfect balance between strategic marketing and creative storytelling. Beyond my work, I find inspiration through travel, forming meaningful connections and expanding my creative vision.\n\nInnovation starts with daring to think differently, and that’s where I thrive",
+      "closing": "",
+      "facts": [
+        {
+          "image": "/images/uploads/lara-camera.jpg",
+          "alt": "Lara sitting on a wooden bench at night",
+          "text": "I got my first camera at 8, now I own three and take them everywhere."
+        },
+        {
+          "image": "/images/uploads/lara-sunset.jpg",
+          "alt": "Person standing in the sea at sunset",
+          "text": "My favorite time of the day is sunset, and I’ll watch it every chance I get."
+        },
+        {
+          "image": "/images/uploads/lara-surf.jpg",
+          "alt": "Surfboards under a thatched beach hut",
+          "text": "I have a passion for watersports, especially surfing & wakeboarding."
+        },
+        {
+          "image": "/images/uploads/lara-beach.jpg",
+          "alt": "Lara walking along a tropical beach",
+          "text": "My favorite travel destination is either a Greek Island or The Philippines."
+        }
+      ]
+    },
+    {
+      "name": "Djenthan",
+      "role": "CREATOR, WEB DESIGN & DEVELOPMENT",
+      "photo": "/images/uploads/djenthan.jpg",
+      "alt": "Djenthan working on a laptop at the beach",
+      "text": "My passion lies in stepping outside the conventional, pushing boundaries, and mastering diverse skills to bring unique ideas to life. Being the first to take a different path is never easy, it’s challenging, but that’s where true innovation begins.\n\nOver the years as an entrepreneur, I’ve learned that success comes from deeply understanding what your audience truly desires and acting on it. My expertise spans content editing, website creation, design, and knowing how to make a lasting impression.\n\nBeyond my work, I draw inspiration from the cultures I experience, the people I meet, and the new perspectives I gain along the way. Every interaction and every journey fuels my creativity, helping me see the world through a broader lens. Music is another passion of mine, a way to tell stories, capture emotions, and connect on a deeper level.\n\nMy greatest strength lies in my ability to connect with others. I thrive in social environments, building meaningful relationships and creating spaces where ideas and people come together.",
+      "closing": "I don’t follow trends - I create them. Let’s build something exceptional together!",
+      "facts": [
+        {
+          "image": "/images/uploads/djenthan-el-nido.jpg",
+          "alt": "Djenthan in an infinity pool at sunset",
+          "text": "The most beautiful place I have ever seen was Napcan Beach in The Philippines - El Nido"
+        },
+        {
+          "image": "/images/uploads/djenthan-snowboard.jpg",
+          "alt": "Djenthan with a snowboard in the mountains",
+          "text": "I really enjoy snowboarding through the beautiful landscapes while taking in the scenery"
+        },
+        {
+          "image": "/images/uploads/djenthan-business.jpg",
+          "alt": "Djenthan working on a laptop on a terrace",
+          "text": "I started my first business at 16, and have been an entrepreneur ever since."
+        },
+        {
+          "image": "/images/uploads/djenthan-atomic-habits.jpg",
+          "alt": "The book Atomic Habits on a laptop next to a coffee",
+          "text": "\"The best book I’ve read is **Atomic Habits** by James Clear, full of insights on good habits.\""
+        }
+      ]
+    }
+  ],
+  "equipment": {
+    "heading": "Equipment",
+    "subheading": "What equipment do we use?",
+    "items": [
+      {
+        "question": "What equipment do we use?",
+        "answer": "- Canon G7X Mark II\n- Groothoek lens camera\n- iphone 16 Pro\n- dji mini 4 pro (temporarily unavailable)",
+        "image": "/images/uploads/equipment-overview.jpg",
+        "alt": "Camera gear laid out on a dark surface",
+        "unavailable": false
+      },
+      {
+        "question": "Canon G7X Mark II",
+        "answer": "The **Canon G7X Mark II** is a **small but powerful camera**, perfect for capturing high-quality content anywhere. Its **bright lens** works great in low light, making it ideal for cozy interiors and sunset shots. The **flip-up screen** makes filming easy, helping us create **engaging videos** that bring every space to life",
+        "image": "/images/uploads/equipment-canon.jpg",
+        "alt": "Hand holding a Canon G7X compact camera",
+        "unavailable": false
+      },
+      {
+        "question": "Nikon D3500",
+        "answer": "The **Nikon D3500** is a **versatile DSLR** that delivers **crisp, high-resolution images**, perfect for showcasing every detail. Its **large sensor** captures natural light beautifully, making interiors look **bright and inviting**. Every shot is **clear and professional**, making it ideal for **high-quality listing photos and marketing visuals**.",
+        "image": "/images/uploads/equipment-nikon.jpg",
+        "alt": "Nikon DSLR camera with a lens",
+        "unavailable": false
+      },
+      {
+        "question": "iPhone 16 Pro",
+        "answer": "The **iPhone 16 Pro** is perfect for capturing **high-quality content on the go**. Its **advanced camera system** delivers crisp photos and smooth 4K videos, making it easy to showcase interiors, exteriors, and lifestyle moments. With **seamless social media integration**, it’s ideal for creating **engaging, ready-to-post content** that highlights your space",
+        "image": "/images/uploads/equipment-iphone.jpg",
+        "alt": "Black iPhone Pro on a white sheet",
+        "unavailable": false
+      },
+      {
+        "question": "dji mini 4 pro",
+        "answer": "The **DJI Mini 4 Pro** captures **stunning aerial visuals**, showcasing properties in a way traditional photography can't. From **bird’s-eye views** to cinematic flyovers, it adds **depth and perspective**, making spaces feel more immersive. With its **high-resolution camera and stable flight**, it delivers **eye-catching, standout content** for every place",
+        "image": "/images/uploads/equipment-drone.jpg",
+        "alt": "DJI Mini drone on a wooden table",
+        "unavailable": true
+      }
+    ]
+  }
+}

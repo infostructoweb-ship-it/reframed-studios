@@ -1,0 +1,26 @@
+<header class="site-header" data-header>
+  <div class="site-header__inner page-width">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+      <span class="visually-hidden">Menu</span>
+      <svg class="icon-open" viewBox="0 0 18 16" aria-hidden="true"><path d="M1 .5h16M1 8h16M1 15.5h16" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+      <svg class="icon-close" viewBox="0 0 18 17" aria-hidden="true"><path d="M1.5 1.5l15 14M16.5 1.5l-15 14" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+    </button>
+    <a class="site-header__logo" href="/" aria-label="{{ site.name }} – home">
+      <img src="/images/static/logo.png" alt="{{ site.name }}" width="90" height="45">
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        {%- for item in navigation %}
+        <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+    <ul>
+      {%- for item in navigation %}
+      <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</header>

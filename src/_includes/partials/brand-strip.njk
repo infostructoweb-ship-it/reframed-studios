@@ -1,0 +1,8 @@
+<section class="brand-strip" aria-label="{{ site.brand_strip.title }}">
+  <p class="brand-strip__title"><span>{{ site.brand_strip.title }}</span></p>
+  <div class="brand-strip__icons">
+    {%- for icon in site.brand_strip.icons %}
+    {% img icon.image, icon.alt, "50px", "", "lazy", [100] %}
+    {%- endfor %}
+  </div>
+</section>

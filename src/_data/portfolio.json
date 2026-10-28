@@ -1,0 +1,122 @@
+{
+  "seo_title": "Portfolio | Hotel & Villa Photography and Short Films - Reframed Studios",
+  "seo_description": "Explore our work: organic photography, short films and user generated content for hotels, villas and Airbnbs in Sicily, Crete, Tuscany, Costa Rica and beyond.",
+  "banner": {
+    "image": "/images/uploads/banner-portfolio.jpg",
+    "alt": "Beach club with parasols and lounge beds at sunset"
+  },
+  "intro": {
+    "heading": "Explore Our Work",
+    "subheading": "Capturing Essence, Creating Ambiance",
+    "text": "Every space has a story, we bring it to life through Organic Photography, Short Film and User Generated Content. We specialize in capturing the atmosphere, personality and essence of each space. Inviting potential guest to experience it for themselves.",
+    "caption": "Reframed Portfolio"
+  },
+  "organic": {
+    "heading": "Organic Photography",
+    "text": "From sunlit linens on a bed to the ripples of an infinity pool, we capture the elements that define a space. With organic content guests don’t just see the place, they feel it. A serene bedroom, a lively terrace, or an lounge, we make sure every detail contributes to a mesmerizing, immersive ambiance.",
+    "images": [
+      {
+        "image": "/images/uploads/organic-img-1223.jpg",
+        "alt": "Beach beds under white parasols by the sea"
+      },
+      {
+        "image": "/images/uploads/organic-19.jpg",
+        "alt": "Sunken stone bath in a bright room"
+      },
+      {
+        "image": "/images/uploads/organic-img-0218.jpg",
+        "alt": "Closed parasol and dining table on a beach at dusk"
+      },
+      {
+        "image": "/images/uploads/organic-67.jpg",
+        "alt": "Villa living room opening onto an infinity pool"
+      },
+      {
+        "image": "/images/uploads/organic-68.jpg",
+        "alt": "Canopy bed by a window with a tropical view"
+      },
+      {
+        "image": "/images/uploads/organic-window.jpg",
+        "alt": "Hotel with palm trees in the evening light"
+      },
+      {
+        "image": "/images/uploads/organic-63.jpg",
+        "alt": "Pool among pine trees overlooking the sea at sunset"
+      },
+      {
+        "image": "/images/uploads/organic-58.jpg",
+        "alt": "Open balcony doors with a view of a coastal town"
+      }
+    ]
+  },
+  "shortfilm": {
+    "heading": "Shortfilm – Bringing Atmosphere to Life",
+    "text": "Every space has a story, we bring it to life with **immersive visuals**. Whether it’s the golden glow of sunset reflecting in the pool, the soft flicker of candlelight at dinner, or the inviting textures of a cozy lounge, we capture the details that make a place **memorable** and **desirable**. These aren’t just about showing a space, they **evoke a feeling** that inspires potential guests.",
+    "videos": [
+      {
+        "title": "Sicily",
+        "video": "/videos/shortfilm-sicily.mp4",
+        "poster": "/images/uploads/poster-shortfilm-sicily.jpg"
+      },
+      {
+        "title": "Crete",
+        "video": "/videos/shortfilm-crete.mp4",
+        "poster": "/images/uploads/poster-shortfilm-crete.jpg"
+      },
+      {
+        "title": "Tuscany",
+        "video": "/videos/shortfilm-tuscany.mp4",
+        "poster": "/images/uploads/poster-shortfilm-tuscany.jpg"
+      },
+      {
+        "title": "Costa Rica",
+        "video": "/videos/shortfilm-costa-rica.mp4",
+        "poster": "/images/uploads/poster-shortfilm-costa-rica.jpg"
+      }
+    ]
+  },
+  "ugc": {
+    "heading": "Luxury Hospitality Content",
+    "text": "Potential guests don’t just book a place, they book an experience. Bringing spaces to life by featuring real people interacting naturally in the environment. Someone sinking into a plush sofa with a morning coffee, stepping into a sun-drenched balcony, or unwinding by the pool, we capture relatable moments that make your property feel like a place guests can see themselves in.",
+    "images": [
+      {
+        "image": "/images/uploads/ugc-7.jpg",
+        "alt": "Unmade bed in a room with white curtains"
+      },
+      {
+        "image": "/images/uploads/ugc-img-9715.jpg",
+        "alt": "Woman relaxing on a beach bed under a parasol"
+      },
+      {
+        "image": "/images/uploads/gallery-41.jpg",
+        "alt": "Pool terrace with a wooden dining table"
+      },
+      {
+        "image": "/images/uploads/ugc-img-8779.jpg",
+        "alt": "Woman in a striped sarong on a villa terrace"
+      },
+      {
+        "image": "/images/uploads/ugc-2.jpg",
+        "alt": "Outdoor kitchen counter with fresh fruit and plants"
+      },
+      {
+        "image": "/images/uploads/ugc-11.jpg",
+        "alt": "Lounge cushions on a lawn at sunset"
+      },
+      {
+        "image": "/images/uploads/ugc-18.jpg",
+        "alt": "Guest relaxing in a pool at night"
+      },
+      {
+        "image": "/images/uploads/ugc-27.jpg",
+        "alt": "Breakfast table on a terrace overlooking the sea"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Interested in Working Together?",
+    "text": "If you’d like to showcase your space with authentic visuals that capture its true atmosphere, feel free to reach out. We’d love to hear your ideas and explore how we can help.",
+    "button_text": "Get in touch",
+    "button_url": "/contact/"
+  }
+}

@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+permalink: /
+bodyClass: home
+eleventyComputed:
+  seoTitle: "{{ home.seo_title | safe }}"
+  seoDescription: "{{ home.seo_description | safe }}"
+---
+{%- set banner = home.hero -%}
+{%- set bannerOverlay = 0.12 -%}
+{%- set bannerClass = "video-banner--home" -%}
+{% include "partials/video-banner.njk" %}
+
+<section class="features features--home">
+  <div class="features__grid page-width">
+    {%- for f in home.features %}
+    <div class="feature reveal">
+      {% img f.icon, f.icon_alt or "", "84px", "feature__icon", "lazy", [200] %}
+      {%- if f.title %}<h2 class="feature__title">{{ f.title }}</h2>{% endif %}
+      {%- if f.text %}<p class="feature__text">{{ f.text }}</p>{% endif %}
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<hr class="divider divider--85">
+
+<section class="rich-text rich-text--intro reveal">
+  <h2 class="rich-text__heading">{{ home.intro.heading }}</h2>
+  <div class="rich-text__body">{{ home.intro.text | paragraphs | safe }}</div>
+</section>
+
+{%- for s in home.services %}
+<section class="service service--{{ s.layout or 'collage' }}">
+  <div class="service__inner">
+    <div class="service__media">
+      {%- if s.video %}
+      <div class="video-player" data-video-player>
+        <video playsinline preload="metadata" poster="{% imgUrl s.image, 800 %}">
+          <source src="{{ s.video }}" type="video/mp4">
+        </video>
+        <button class="video-player__hit" type="button" aria-label="Play video: {{ s.heading | plain }}">{% include "partials/play-icon.njk" %}</button>
+      </div>
+      {%- else %}
+      <div class="service__frame">{% img s.image, s.alt, "(min-width: 750px) 475px, 100vw", "service__image" %}</div>
+      {%- endif %}
+    </div>
+    <div class="service__text">
+      <h2 class="service__heading">{{ s.heading }}</h2>
+      <div class="service__body">{{ s.text | paragraphs | safe }}</div>
+      {%- if s.link_text and s.link_url %}
+      <a class="text-link" href="{{ s.link_url }}">{{ s.link_text }}</a>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+{%- endfor %}
+
+<hr class="divider divider--100">
+
+<section class="steps page-width">
+  <h2 class="steps__heading">{{ home.steps.heading }}</h2>
+  <div class="steps__list">
+    {%- for step in home.steps.items %}
+    <details class="step"{% if loop.first %} open{% endif %}>
+      <summary class="step__summary">
+        <span class="step__number">{{ loop.index0 | roman }}</span>
+        <span class="step__title">{{ step.title }}</span>
+      </summary>
+      <div class="step__answer">{{ step.text | paragraphs | safe }}</div>
+    </details>
+    {%- endfor %}
+  </div>
+</section>
+
+{% include "partials/brand-strip.njk" %}
+
+{%- set galleryImages = home.gallery -%}
+{%- set galleryRatio = "wide" -%}
+{%- set galleryMobile = "hide" -%}
+{% include "partials/gallery.njk" %}

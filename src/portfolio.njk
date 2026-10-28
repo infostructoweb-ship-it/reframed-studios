@@ -1,0 +1,79 @@
+---
+layout: layouts/base.njk
+permalink: /portfolio/
+bodyClass: portfolio
+eleventyComputed:
+  seoTitle: "{{ portfolio.seo_title | safe }}"
+  seoDescription: "{{ portfolio.seo_description | safe }}"
+---
+<section class="image-banner image-banner--overlay">
+  {% img portfolio.banner.image, portfolio.banner.alt, "100vw", "", "eager" %}
+</section>
+
+<section class="rich-text rich-text--page-intro reveal">
+  <h1 class="rich-text__heading rich-text__heading--large">{{ portfolio.intro.heading }}</h1>
+  {%- if portfolio.intro.subheading %}<p class="rich-text__sub">{{ portfolio.intro.subheading }}</p>{% endif %}
+  <div class="rich-text__body">{{ portfolio.intro.text | paragraphs | safe }}</div>
+  {%- if portfolio.intro.caption %}<p class="rich-text__caption">{{ portfolio.intro.caption }}</p>{% endif %}
+</section>
+
+<div class="icon-row page-width" aria-hidden="true">
+  {%- for icon in site.brand_strip.icons %}
+  {% img icon.image, "", "84px", "", "lazy", [200] %}
+  {%- endfor %}
+</div>
+
+<hr class="divider divider--100 divider--spaced">
+
+<section class="portfolio-block">
+  <div class="portfolio-block__intro">
+    <h2 class="portfolio-block__heading">{{ portfolio.organic.heading }}</h2>
+    <div class="portfolio-block__text">{{ portfolio.organic.text | paragraphs | safe }}</div>
+  </div>
+  {%- set galleryImages = portfolio.organic.images -%}
+  {%- set galleryRatio = "square" -%}
+  {%- set galleryMobile = "grid" -%}
+  {% include "partials/gallery.njk" %}
+</section>
+
+<section class="shortfilms">
+  <div class="shortfilms__intro">
+    <h2 class="shortfilms__heading">{{ portfolio.shortfilm.heading }}</h2>
+    <div class="shortfilms__text">{{ portfolio.shortfilm.text | paragraphs | safe }}</div>
+  </div>
+  <div class="shortfilms__track" data-slider>
+    {%- for v in portfolio.shortfilm.videos %}
+    <div class="shortfilm">
+      <div class="video-player video-player--portrait" data-video-player>
+        {%- if v.video %}
+        <video playsinline preload="none" poster="{% imgUrl v.poster, 800 %}">
+          <source src="{{ v.video }}" type="video/mp4">
+        </video>
+        <button class="video-player__hit" type="button" aria-label="Play video: {{ v.title }}">{% include "partials/play-icon.njk" %}</button>
+        {%- else %}
+        {% img v.poster, v.title, "(min-width: 750px) 25vw, 80vw" %}
+        {%- endif %}
+      </div>
+      {%- if v.title %}<p class="shortfilm__title">{{ v.title }}</p>{% endif %}
+    </div>
+    {%- endfor %}
+  </div>
+  <div class="slider-dots" data-slider-dots aria-hidden="true"></div>
+</section>
+
+<section class="portfolio-block portfolio-block--ugc">
+  <div class="portfolio-block__intro">
+    <h2 class="portfolio-block__heading">{{ portfolio.ugc.heading }}</h2>
+    <div class="portfolio-block__text">{{ portfolio.ugc.text | paragraphs | safe }}</div>
+  </div>
+  {%- set galleryImages = portfolio.ugc.images -%}
+  {% include "partials/gallery.njk" %}
+</section>
+
+<section class="rich-text rich-text--cta reveal">
+  <h2 class="rich-text__heading">{{ portfolio.cta.heading }}</h2>
+  <div class="rich-text__body">{{ portfolio.cta.text | paragraphs | safe }}</div>
+  {%- if portfolio.cta.button_text and portfolio.cta.button_url %}
+  <a class="button" href="{{ portfolio.cta.button_url }}">{{ portfolio.cta.button_text }}</a>
+  {%- endif %}
+</section>

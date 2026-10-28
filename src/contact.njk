@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+permalink: /contact/
+bodyClass: contact
+eleventyComputed:
+  seoTitle: "{{ contact.seo_title | safe }}"
+  seoDescription: "{{ contact.seo_description | safe }}"
+---
+{%- set banner = contact.hero -%}
+{%- set bannerOverlay = 0 -%}
+{%- set bannerClass = "video-banner--contact" -%}
+{% include "partials/video-banner.njk" %}
+
+<section class="contact-form">
+  <h2 class="contact-form__heading">{{ contact.form.heading }}</h2>
+  <div class="contact-form__intro">{{ contact.form.text | paragraphs | safe }}</div>
+
+  <form class="form" data-contact-form data-inactive-message="{{ contact.form.inactive_message }}" novalidate>
+
+    <div class="form__row form__row--half">
+      <div class="field">
+        <label for="first-name">First name*</label>
+        <input id="first-name" name="First name" type="text" autocomplete="given-name" required>
+      </div>
+      <div class="field">
+        <label for="last-name">Last name</label>
+        <input id="last-name" name="Last name" type="text" autocomplete="family-name">
+      </div>
+    </div>
+    <div class="field">
+      <label for="email">Email address*</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="phone">Phone number</label>
+      <input id="phone" name="Phone" type="tel" autocomplete="tel">
+    </div>
+    <div class="field">
+      <label for="message">Message*</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tell us why you are contacting us." required></textarea>
+    </div>
+    <div class="field">
+      <label for="property">Name / Link of the property*</label>
+      <input id="property" name="Property" type="text" required>
+    </div>
+    {%- if contact.form.services | length %}
+    <fieldset class="field field--checks">
+      <legend>{{ contact.form.services_label }}</legend>
+      <div class="checks">
+        {%- for option in contact.form.services %}
+        <label class="check"><input type="checkbox" name="Services" value="{{ option }}"> {{ option }}</label>
+        {%- endfor %}
+      </div>
+    </fieldset>
+    {%- endif %}
+    <button class="form__submit" type="submit">{{ contact.form.button_text or "Submit" }}</button>
+    <p class="form__status" data-form-status role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<hr class="divider divider--90">
+
+<section class="direct-contact page-width">
+  <p class="direct-contact__heading">{{ contact.direct_heading }}</p>
+  <div class="direct-contact__grid">
+    {%- if site.email %}
+    <div><h2 class="direct-contact__label">E-Mail</h2><p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p></div>
+    {%- endif %}
+    {%- if site.phone %}
+    <div><h2 class="direct-contact__label">Phone</h2><p><a href="tel:{{ site.phone_link }}">{{ site.phone }}</a></p></div>
+    {%- endif %}
+  </div>
+</section>
+
+{% include "partials/brand-strip.njk" %}
+
+{%- set galleryImages = site.photo_strip -%}
+{%- set galleryRatio = "wide" -%}
+{%- set galleryMobile = "hide" -%}
+{% include "partials/gallery.njk" %}

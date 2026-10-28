@@ -1,0 +1,124 @@
+{
+  "seo_title": "Reframed Studios | Organic Photography & Short Film for Hotels and Airbnbs",
+  "seo_description": "Authentic photography, short films and user generated content for hotels, villas and Airbnbs. We capture the atmosphere of your space so guests can feel it.",
+  "hero": {
+    "title": "REFRAMED STUDIOS",
+    "subtitle": "Capturing Essence",
+    "video": "/videos/hero-palm.mp4",
+    "poster": "/images/uploads/poster-palm.jpg",
+    "poster_alt": "Palm trees swaying against an evening sky"
+  },
+  "features": [
+    {
+      "icon": "/images/uploads/icon-passionate.png",
+      "title": "Passionate",
+      "text": "We are passionate about creating visually captivating content that highlights the unique character and ambiance of a space."
+    },
+    {
+      "icon": "/images/uploads/icon-expertise.png",
+      "title": "Expertise",
+      "text": "With our expertise in consumer psychology our content goes beyond visuals, it tells a story that feels real, making it resonate with your audience."
+    },
+    {
+      "icon": "/images/uploads/icon-precise.png",
+      "title": "Precise",
+      "text": "With a sharp eye for detail, we ensure every shot meets the highest quality standards - capturing each element flawlessly."
+    },
+    {
+      "icon": "/images/uploads/icon-proactive.png",
+      "title": "Proactive",
+      "text": "We provide guidance and advise from a marketing perspective, helping to maximize the outcome for each space."
+    }
+  ],
+  "intro": {
+    "heading": "Content that converts",
+    "text": "Driven by our passion for photography and capturing **ambiance**, we create visual content that highlights the **true essence** of every space. Rather than traditional staged photography, we believe in an **authentic** and immersive approach that showcases atmosphere and design in an **organic** way.\n\nEffective branding starts with understanding what guests are looking for and sharing content that **translates a feeling**. Where standard, static images can feel impersonal, **authentic visuals** invite potential guests to experience the character and uniqueness of the place."
+  },
+  "services": [
+    {
+      "heading": "Organic Photography",
+      "text": "We capture spaces through an **authentic lens**, bringing out the **atmosphere and personality** in a natural, unforced way. Instead of overly staged shots, we focus on the real charm - both in the details and the bigger picture. These visuals are created to **resonate** with your audience across social media, marketing materials, and beyond.\n\n- Authentic\n- Connection & emotionally driven\n- Versatile, compatible, and highly effective",
+      "image": "/images/uploads/collage-organic-photography.jpg",
+      "alt": "Collage of organic photography: infinity pool, stone bath, beach dining and bedroom",
+      "video": "",
+      "link_text": "Portfolio",
+      "link_url": "/portfolio/",
+      "layout": "collage"
+    },
+    {
+      "heading": "Shortfilm - Bringing Atmosphere to Life",
+      "text": "We create short film and video series that **highlight** the **standout features** of a place with an immersive sense of **ambiance**. These videos are designed to capture the **personality** of your property and bring it to life in under a minute - perfect for engaging content on social media or marketing materials.\n\n- High Engagement\n- Immersive & Interactive\n- Perfect for Socials & Marketing Materials",
+      "image": "/images/uploads/poster-shortfilm-home.jpg",
+      "alt": "Deck chair in the sea at the foot of a cliff at sunset",
+      "video": "/videos/shortfilm-home.mp4",
+      "link_text": "",
+      "link_url": "",
+      "layout": "film"
+    },
+    {
+      "heading": "Luxury Hospitality Content",
+      "text": "We create user generated content that makes your space feel **inviting and lived-in**, rather than just a static property. By featuring real people interacting naturally within the space, we capture **genuine, relatable moments** that showcase its true personality. These visuals help potential guests envision themselves there, making your property more appealing.\n\n- Relatable & Engaging\n- Bringing Spaces to Life\n- Ideal for Socials & Marketing",
+      "image": "/images/uploads/collage-luxury-hospitality.jpg",
+      "alt": "Collage of guests relaxing on a beach bed, in a villa and on a terrace",
+      "video": "",
+      "link_text": "Portfolio",
+      "link_url": "/portfolio/",
+      "layout": "collage"
+    }
+  ],
+  "steps": {
+    "heading": "How do we work?",
+    "items": [
+      {
+        "title": "Discovery & Consultation",
+        "text": "Our first step is to **understand your vision,** what makes your space unique and how you want it to be experienced. Based on this we determine the best approach, whether it’s a **single service** or a **comprehensive package** that brings everything together seamlessly.\n\nFor unique ideas, we also offer **fully customizable** options."
+      },
+      {
+        "title": "Strategy & Approach",
+        "text": "With our background in **marketing** and **branding** we don’t just create content, we strategize. We analyze your space and determine which visual approach best **enhances its appeal**, balancing both **aesthetics** and **storytelling.**"
+      },
+      {
+        "title": "Production",
+        "text": "This is where we work our magic. We capture every detail with precision, ensuring the content feels **authentic, engaging,** and **high-quality**. From carefully framed shots to immersive storytelling, we focus on creating visuals that truly **resonate with your audience**."
+      },
+      {
+        "title": "Deliverables",
+        "text": "Once the content is created, we provide all **high-resolution** images and videos, optimized for social media, booking platforms, and marketing materials. We ensure a smooth handover, and after final handling, the full rights to the content are yours."
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "image": "/images/uploads/gallery-44.jpg",
+      "alt": "Stone steps leading down to a plunge pool"
+    },
+    {
+      "image": "/images/uploads/gallery-28.jpg",
+      "alt": "Woman walking down a whitewashed staircase"
+    },
+    {
+      "image": "/images/uploads/gallery-terrace.jpg",
+      "alt": "Bedroom with a curtain blowing in the wind"
+    },
+    {
+      "image": "/images/uploads/gallery-img-8634.jpg",
+      "alt": "Hotel building surrounded by trees at dusk"
+    },
+    {
+      "image": "/images/uploads/gallery-23.jpg",
+      "alt": "Shaded seaside terrace with a dining table"
+    },
+    {
+      "image": "/images/uploads/gallery-bedroom.jpg",
+      "alt": "Outdoor stone bath surrounded by cacti"
+    },
+    {
+      "image": "/images/uploads/gallery-las-lunas.jpg",
+      "alt": "Minimalist room with a wooden door and wall art"
+    },
+    {
+      "image": "/images/uploads/gallery-38.jpg",
+      "alt": "Soft white linen on an unmade bed"
+    }
+  ]
+}

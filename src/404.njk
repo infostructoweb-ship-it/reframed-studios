@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+permalink: /404.html
+bodyClass: notfound
+noindex: true
+sitemap: false
+seoTitle: "Page not found - Reframed Studios"
+---
+<section class="rich-text rich-text--thanks">
+  <h1 class="rich-text__heading rich-text__heading--large">Page not found</h1>
+  <div class="rich-text__body"><p>The page you are looking for doesn’t exist or has been moved.</p></div>
+  <a class="button" href="/">Back to homepage</a>
+</section>
+{%- set galleryImages = site.photo_strip -%}
+{%- set galleryRatio = "wide" -%}
+{%- set galleryMobile = "hide" -%}
+{% include "partials/gallery.njk" %}

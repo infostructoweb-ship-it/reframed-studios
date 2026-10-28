@@ -1,0 +1,29 @@
+{%- set baseUrl = site.url | replace(r/\/+$/, "") -%}
+{%- set sameAs = [] -%}
+{%- if site.instagram %}{% set sameAs = (sameAs.push(site.instagram), sameAs) %}{% endif -%}
+{%- if site.tiktok %}{% set sameAs = (sameAs.push(site.tiktok), sameAs) %}{% endif -%}
+{%- if site.youtube %}{% set sameAs = (sameAs.push(site.youtube), sameAs) %}{% endif -%}
+{%- set org = {
+  "@type": "Organization",
+  "@id": baseUrl + "/#organization",
+  "name": site.name,
+  "url": baseUrl + "/",
+  "logo": baseUrl + "/images/static/logo.png",
+  "image": baseUrl + "/images/static/og-image.jpg",
+  "description": site.seo_description,
+  "email": site.email,
+  "telephone": site.phone_link,
+  "areaServed": site.area_served,
+  "knowsAbout": ["Hospitality photography", "Short film", "User generated content", "Airbnb photography", "Hotel marketing"],
+  "founder": [],
+  "sameAs": sameAs
+} -%}
+{%- for m in about.team %}{% set _ = org.founder.push({"@type": "Person", "name": m.name, "jobTitle": m.role}) %}{% endfor -%}
+{%- set graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": baseUrl + "/#website", "url": baseUrl + "/", "name": site.name, "inLanguage": site.language, "publisher": { "@id": baseUrl + "/#organization" } },
+    org
+  ]
+} -%}
+<script type="application/ld+json">{{ graph | dump | safe }}</script>

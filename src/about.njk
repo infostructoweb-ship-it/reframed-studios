@@ -1,0 +1,79 @@
+---
+layout: layouts/base.njk
+permalink: /about-us/
+bodyClass: about
+eleventyComputed:
+  seoTitle: "{{ about.seo_title | safe }}"
+  seoDescription: "{{ about.seo_description | safe }}"
+---
+<section class="image-banner">
+  {% img about.banner.image, about.banner.alt, "100vw", "", "eager" %}
+</section>
+
+<section class="rich-text rich-text--about reveal">
+  <h1 class="rich-text__heading">{{ about.intro.heading }}</h1>
+  <div class="rich-text__body">{{ about.intro.text | paragraphs | safe }}</div>
+</section>
+
+<section class="values page-width" aria-label="Our values">
+  {%- for v in about.values %}
+  <div class="value">
+    {% img v.icon, "", "84px", "value__icon", "lazy", [200] %}
+    <p class="value__label">{{ v.label }}</p>
+  </div>
+  {%- endfor %}
+</section>
+
+{%- for m in about.team %}
+<hr class="divider divider--wide">
+<section class="member">
+  <div class="member__inner">
+    <div class="member__text">
+      <h2 class="member__name">{{ m.name }}</h2>
+      {%- if m.role %}<p class="member__role">{{ m.role }}</p>{% endif %}
+      <div class="member__body">{{ m.text | paragraphs | safe }}</div>
+      {%- if m.closing %}<p class="member__closing">{{ m.closing }}</p>{% endif %}
+    </div>
+    <div class="member__photo">{% img m.photo, m.alt, "(min-width: 750px) 40vw, 100vw" %}</div>
+  </div>
+</section>
+<section class="facts page-width" aria-label="About {{ m.name }}">
+  {%- for f in m.facts %}
+  <figure class="fact">
+    <div class="fact__image">{% img f.image, f.alt, "(min-width: 750px) 25vw, 50vw" %}</div>
+    <figcaption class="fact__text">{{ f.text | inline | safe }}</figcaption>
+  </figure>
+  {%- endfor %}
+</section>
+{%- endfor %}
+
+<hr class="divider divider--wide">
+
+<section class="equipment">
+  <div class="equipment__head">
+    <h2 class="equipment__heading">{{ about.equipment.heading }}</h2>
+    {%- if about.equipment.subheading %}<p class="equipment__sub">{{ about.equipment.subheading }}</p>{% endif %}
+  </div>
+  <div class="equipment__grid">
+    <div class="equipment__images">
+      {%- for item in about.equipment.items %}
+      <div class="equipment__image{% if loop.first %} is-active{% endif %}" data-faq-image="{{ loop.index0 }}">{% img item.image, item.alt, "(min-width: 750px) 500px, 100vw" %}</div>
+      {%- endfor %}
+    </div>
+    <div class="equipment__list">
+      {%- for item in about.equipment.items %}
+      <details class="faq" name="equipment" data-faq="{{ loop.index0 }}"{% if loop.first %} open{% endif %}>
+        <summary class="faq__question">{% if item.unavailable %}<s>{{ item.question }}</s><span class="visually-hidden"> (temporarily unavailable)</span>{% else %}{{ item.question }}{% endif %}</summary>
+        <div class="faq__answer">{{ item.answer | paragraphs | safe }}</div>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "partials/brand-strip.njk" %}
+
+{%- set galleryImages = site.photo_strip -%}
+{%- set galleryRatio = "wide" -%}
+{%- set galleryMobile = "hide" -%}
+{% include "partials/gallery.njk" %}

@@ -1,0 +1,33 @@
+<footer class="site-footer">
+  <div class="site-footer__inner page-width">
+    <div class="footer-block">
+      <h2 class="footer-block__heading">{{ site.footer_nav_heading }}</h2>
+      <ul class="footer-menu">
+        {%- for item in navigation %}
+        <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="footer-block">
+      <h2 class="footer-block__heading">{{ site.footer_contact_heading }}</h2>
+      {%- if site.email %}<p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>{% endif %}
+      {%- if site.phone %}<p>Tel <a href="tel:{{ site.phone_link }}">{{ site.phone }}</a></p>{% endif %}
+      {%- if site.instagram or site.tiktok or site.youtube %}
+      <ul class="social-links">
+        {%- if site.instagram %}<li><a href="{{ site.instagram }}" rel="noopener" target="_blank">Instagram</a></li>{% endif %}
+        {%- if site.tiktok %}<li><a href="{{ site.tiktok }}" rel="noopener" target="_blank">TikTok</a></li>{% endif %}
+        {%- if site.youtube %}<li><a href="{{ site.youtube }}" rel="noopener" target="_blank">YouTube</a></li>{% endif %}
+      </ul>
+      {%- endif %}
+    </div>
+    <div class="footer-block footer-block--logo">
+      <a class="footer-logo" href="/" aria-label="{{ site.name }} – home">
+        <img src="/images/static/logo-palm.png" alt="" width="109" height="146" loading="lazy">
+        <span>{{ site.name }}</span>
+      </a>
+    </div>
+  </div>
+  <div class="site-footer__bottom page-width">
+    <p>&copy; <span data-year>{{ buildYear }}</span>, {{ site.name }}</p>
+  </div>
+</footer>

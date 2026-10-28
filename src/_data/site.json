@@ -1,0 +1,55 @@
+{
+  "name": "Reframed Studios",
+  "url": "https://reframedstudios.structoweb.nl",
+  "language": "en",
+  "seo_description": "Reframed Studios creates organic photography, short films and user generated content for hotels, villas and Airbnbs that capture the true atmosphere of every space.",
+  "og_image": "",
+  "area_served": "Europe",
+  "email": "contact@reframedstudios.com",
+  "phone": "(+316) 2369-0596",
+  "phone_link": "+31623690596",
+  "instagram": "",
+  "tiktok": "",
+  "youtube": "",
+  "brand_strip": {
+    "title": "Reframed Studios",
+    "icons": [
+      {
+        "image": "/images/uploads/icon-passionate.png",
+        "alt": ""
+      },
+      {
+        "image": "/images/uploads/icon-precise.png",
+        "alt": ""
+      },
+      {
+        "image": "/images/uploads/icon-expertise.png",
+        "alt": ""
+      },
+      {
+        "image": "/images/uploads/icon-proactive.png",
+        "alt": ""
+      }
+    ]
+  },
+  "photo_strip": [
+    {
+      "image": "/images/uploads/gallery-44.jpg",
+      "alt": "Stone steps leading down to a plunge pool"
+    },
+    {
+      "image": "/images/uploads/gallery-28.jpg",
+      "alt": "Woman walking down a whitewashed staircase"
+    },
+    {
+      "image": "/images/uploads/gallery-curtain.jpg",
+      "alt": "Linen curtain blowing over a bed"
+    },
+    {
+      "image": "/images/uploads/gallery-41.jpg",
+      "alt": "Pool terrace with a wooden dining table"
+    }
+  ],
+  "footer_contact_heading": "Direct Contact",
+  "footer_nav_heading": "Navigations"
+}

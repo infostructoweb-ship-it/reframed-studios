@@ -1,0 +1,17 @@
+{#- verwacht: banner {title, subtitle, video, poster}, bannerOverlay, bannerClass -#}
+<section class="video-banner {{ bannerClass }}">
+  <div class="video-banner__media">
+    {%- if banner.video %}
+    <video autoplay muted loop playsinline preload="auto" poster="{% imgUrl banner.poster, 1600 %}" aria-hidden="true">
+      <source src="{{ banner.video }}" type="video/mp4">
+    </video>
+    {%- else %}
+    {% img banner.poster, banner.poster_alt, "100vw", "", "eager" %}
+    {%- endif %}
+    <div class="video-banner__overlay" style="opacity: {{ bannerOverlay or 0 }}"></div>
+  </div>
+  <div class="video-banner__content">
+    <h1 class="video-banner__title">{{ banner.title }}</h1>
+    {%- if banner.subtitle %}<p class="video-banner__subtitle">{{ banner.subtitle }}</p>{% endif %}
+  </div>
+</section>
