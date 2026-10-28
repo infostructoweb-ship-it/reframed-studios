@@ -1,0 +1,366 @@
+media:
+  - name: images
+    label: Afbeeldingen
+    input: src/images/uploads
+    output: /images/uploads
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+  - name: videos
+    label: Video's
+    input: src/videos
+    output: /videos
+    extensions: [mp4]
+    rename: safe
+
+content:
+  # ---------------- HOMEPAGE ----------------
+  - name: home
+    label: Homepage
+    type: file
+    path: src/_data/home.json
+    format: json
+    fields:
+      - name: seo_title
+        label: SEO-titel (Google)
+        type: string
+        description: Titel in de zoekresultaten van Google. Max. ± 60 tekens.
+      - name: seo_description
+        label: SEO-omschrijving (Google)
+        type: text
+        description: Korte omschrijving onder de titel in Google. Max. ± 155 tekens.
+      - name: hero
+        label: Bovenste banner
+        type: object
+        fields:
+          - { name: title, label: Titel, type: string }
+          - { name: subtitle, label: Ondertitel, type: string }
+          - name: video
+            label: Achtergrondvideo (mp4, max. 5 MB, zonder geluid)
+            type: file
+            options: { media: videos }
+          - name: poster
+            label: Stilstaand beeld (getoond tot de video laadt)
+            type: image
+            options: { media: images }
+          - { name: poster_alt, label: Omschrijving stilstaand beeld (alt-tekst), type: string }
+      - name: features
+        label: Iconen met tekst
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icoon
+            type: image
+            options: { media: images }
+          - { name: title, label: Titel, type: string }
+          - { name: text, label: Tekst, type: text }
+      - name: intro
+        label: Introductie
+        type: object
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - name: text
+            label: Tekst
+            type: text
+            description: "Lege regel = nieuwe alinea. Zet **woorden** tussen dubbele sterretjes voor vetgedrukt."
+      - name: services
+        label: Diensten (beeld + tekst)
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - name: text
+            label: Tekst
+            type: text
+            description: "Lege regel = nieuwe alinea. Regels die beginnen met '- ' worden een opsomming. **Vet** met dubbele sterretjes."
+          - name: image
+            label: Afbeelding (bij een video het stilstaande beeld)
+            type: image
+            options: { media: images }
+          - { name: alt, label: Omschrijving afbeelding (alt-tekst), type: string }
+          - name: video
+            label: Video (optioneel, mp4 max. 5 MB)
+            type: file
+            options: { media: videos }
+          - name: layout
+            label: Opmaak
+            type: select
+            options:
+              values:
+                - { value: collage, label: "Afbeelding links (liggend)" }
+                - { value: film, label: "Staande video/afbeelding rechts" }
+          - { name: link_text, label: Linktekst (leeg = geen link), type: string }
+          - { name: link_url, label: Link naar, type: string, description: "Bijv. /portfolio/ of /contact/" }
+      - name: steps
+        label: Werkwijze (How do we work?)
+        type: object
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - name: items
+            label: Stappen
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Titel, type: string }
+              - { name: text, label: Tekst, type: text, description: "Lege regel = nieuwe alinea. **Vet** met dubbele sterretjes." }
+      - name: gallery
+        label: Fotogalerij onderaan
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Foto
+            type: image
+            options: { media: images }
+          - { name: alt, label: Omschrijving foto (alt-tekst), type: string }
+
+  # ---------------- PORTFOLIO ----------------
+  - name: portfolio
+    label: Portfolio
+    type: file
+    path: src/_data/portfolio.json
+    format: json
+    fields:
+      - { name: seo_title, label: SEO-titel (Google), type: string }
+      - { name: seo_description, label: SEO-omschrijving (Google), type: text }
+      - name: banner
+        label: Banner bovenaan
+        type: object
+        fields:
+          - name: image
+            label: Afbeelding
+            type: image
+            options: { media: images }
+          - { name: alt, label: Omschrijving afbeelding (alt-tekst), type: string }
+      - name: intro
+        label: Introductie
+        type: object
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - { name: subheading, label: Ondertitel, type: string }
+          - { name: text, label: Tekst, type: text }
+          - { name: caption, label: Klein label onder de tekst, type: string }
+      - name: organic
+        label: Organic Photography
+        type: object
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - { name: text, label: Tekst, type: text }
+          - name: images
+            label: Foto's
+            type: object
+            list: true
+            fields:
+              - name: image
+                label: Foto
+                type: image
+                options: { media: images }
+              - { name: alt, label: Omschrijving foto (alt-tekst), type: string }
+      - name: shortfilm
+        label: Shortfilms
+        type: object
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - { name: text, label: Tekst, type: text, description: "**Vet** met dubbele sterretjes." }
+          - name: videos
+            label: Video's
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Titel (naast de video), type: string }
+              - name: video
+                label: Video (mp4, max. 5 MB)
+                type: file
+                options: { media: videos }
+              - name: poster
+                label: Stilstaand beeld
+                type: image
+                options: { media: images }
+      - name: ugc
+        label: Luxury Hospitality Content
+        type: object
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - { name: text, label: Tekst, type: text }
+          - name: images
+            label: Foto's
+            type: object
+            list: true
+            fields:
+              - name: image
+                label: Foto
+                type: image
+                options: { media: images }
+              - { name: alt, label: Omschrijving foto (alt-tekst), type: string }
+      - name: cta
+        label: Afsluiter (Interested in Working Together?)
+        type: object
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - { name: text, label: Tekst, type: text }
+          - { name: button_text, label: Knoptekst, type: string }
+          - { name: button_url, label: Knop linkt naar, type: string }
+
+  # ---------------- ABOUT US ----------------
+  - name: about
+    label: About Us
+    type: file
+    path: src/_data/about.json
+    format: json
+    fields:
+      - { name: seo_title, label: SEO-titel (Google), type: string }
+      - { name: seo_description, label: SEO-omschrijving (Google), type: text }
+      - name: banner
+        label: Banner bovenaan
+        type: object
+        fields:
+          - name: image
+            label: Afbeelding
+            type: image
+            options: { media: images }
+          - { name: alt, label: Omschrijving afbeelding (alt-tekst), type: string }
+      - name: intro
+        label: Introductie
+        type: object
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - { name: text, label: Tekst, type: text, description: "Lege regel = nieuwe alinea." }
+      - name: values
+        label: Iconen met label
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icoon
+            type: image
+            options: { media: images }
+          - { name: label, label: Label, type: string }
+      - name: team
+        label: Teamleden
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Naam, type: string }
+          - { name: role, label: Functie, type: string }
+          - name: photo
+            label: Portretfoto
+            type: image
+            options: { media: images }
+          - { name: alt, label: Omschrijving foto (alt-tekst), type: string }
+          - { name: text, label: Tekst, type: text, description: "Lege regel = nieuwe alinea." }
+          - { name: closing, label: Slotzin (vetgedrukt, optioneel), type: string }
+          - name: facts
+            label: Foto's met weetje
+            type: object
+            list: true
+            fields:
+              - name: image
+                label: Foto
+                type: image
+                options: { media: images }
+              - { name: alt, label: Omschrijving foto (alt-tekst), type: string }
+              - { name: text, label: Weetje, type: text, description: "**Vet** met dubbele sterretjes." }
+      - name: equipment
+        label: Equipment
+        type: object
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - { name: subheading, label: Ondertitel, type: string }
+          - name: items
+            label: Vragen / apparatuur
+            type: object
+            list: true
+            fields:
+              - { name: question, label: Titel, type: string }
+              - { name: answer, label: Tekst, type: text, description: "Regels die beginnen met '- ' worden een opsomming. **Vet** met dubbele sterretjes." }
+              - name: image
+                label: Afbeelding (wordt getoond als deze vraag open staat)
+                type: image
+                options: { media: images }
+              - { name: alt, label: Omschrijving afbeelding (alt-tekst), type: string }
+              - { name: unavailable, label: Tijdelijk niet beschikbaar (titel doorstrepen), type: boolean }
+
+  # ---------------- CONTACT ----------------
+  - name: contact
+    label: Contact
+    type: file
+    path: src/_data/contact.json
+    format: json
+    fields:
+      - { name: seo_title, label: SEO-titel (Google), type: string }
+      - { name: seo_description, label: SEO-omschrijving (Google), type: text }
+      - name: hero
+        label: Banner bovenaan
+        type: object
+        fields:
+          - { name: title, label: Titel, type: string }
+          - name: video
+            label: Achtergrondvideo (mp4, max. 5 MB)
+            type: file
+            options: { media: videos }
+          - name: poster
+            label: Stilstaand beeld
+            type: image
+            options: { media: images }
+          - { name: poster_alt, label: Omschrijving stilstaand beeld (alt-tekst), type: string }
+      - name: form
+        label: Formulier
+        type: object
+        fields:
+          - { name: heading, label: Kop, type: string }
+          - { name: text, label: Tekst, type: text }
+          - { name: services_label, label: Vraag bij de vinkjes, type: string }
+          - { name: services, label: Keuzes (vinkjes), type: string, list: true }
+          - { name: button_text, label: Knoptekst, type: string }
+          - { name: inactive_message, label: Melding na versturen, type: text, description: "Dit is een portfoliosite: het formulier verstuurt niets en toont deze melding." }
+      - { name: direct_heading, label: Kop boven e-mail en telefoon, type: string }
+
+  # ---------------- ALGEMEEN ----------------
+  - name: site
+    label: Algemene instellingen
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - { name: name, label: Bedrijfsnaam, type: string }
+      - { name: url, label: Websiteadres, type: string, description: "Volledig adres zonder slash aan het eind, bijv. https://reframedstudios.structoweb.nl" }
+      - { name: language, label: Taal van de site (code), type: string, description: "en = Engels, nl = Nederlands" }
+      - { name: seo_description, label: Standaard SEO-omschrijving, type: text }
+      - name: og_image
+        label: Deelafbeelding social media (optioneel, liefst 1200×630)
+        type: image
+        options: { media: images }
+      - { name: area_served, label: Werkgebied (voor Google), type: string }
+      - { name: email, label: E-mailadres, type: string }
+      - { name: phone, label: Telefoonnummer (zoals getoond), type: string }
+      - { name: phone_link, label: Telefoonnummer voor bellen, type: string, description: "Zonder spaties, bijv. +31623690596" }
+      - { name: instagram, label: Instagram-link (leeg = verborgen), type: string }
+      - { name: tiktok, label: TikTok-link (leeg = verborgen), type: string }
+      - { name: youtube, label: YouTube-link (leeg = verborgen), type: string }
+      - { name: footer_nav_heading, label: Footer – kop menu, type: string }
+      - { name: footer_contact_heading, label: Footer – kop contact, type: string }
+      - name: brand_strip
+        label: Merkstrook (Reframed Studios + iconen)
+        type: object
+        fields:
+          - { name: title, label: Titel, type: string }
+          - name: icons
+            label: Iconen
+            type: object
+            list: true
+            fields:
+              - name: image
+                label: Icoon
+                type: image
+                options: { media: images }
+              - { name: alt, label: Omschrijving (mag leeg), type: string }
+      - name: photo_strip
+        label: Fotostrook onderaan (About, Contact, 404)
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Foto
+            type: image
+            options: { media: images }
+          - { name: alt, label: Omschrijving foto (alt-tekst), type: string }
